@@ -1,113 +1,57 @@
-import Image from 'next/image'
+import Image from "next/image";
+import HeaderLogo from "../media/header-logo.png";
+import SaudDP from "../media/SaudDP.png";
+import ShreytamDP from "../media/ShreytamDP.jpg";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center px-12 bg-white text-black pb-20">
+      <div className="flex justify-center py-10 max-md:w-40">
+        <Image src={HeaderLogo} width={300} />
+      </div>
+      <h1 className="text-6xl font-bold max-md:text-4xl text-center">
+        We build <span className="text-sky-500">awesome AI</span> projects!
+      </h1>
+      <h2 className="mt-8 bg-sky-500 rounded-full py-1 px-2 text-white text-lg max-md:text-base">
+        Our 2024 resolution:{" "}
+        <u className="text-black font-semibold">build 69 projects</u> 😏
+      </h2>
+      <section className="flex flex-col text-center mt-20 gap-3">
+        <h1 className="text-2xl underline font-bold mb-20">Who we are?</h1>
+
+        {/* SAUD SECTION */}
+        <div className="flex pr-20 justify-evenly max-md:flex-col max-md:pr-0">
+          <div className="flex-1 flex justify-center">
+            <Image className="rounded-md shadow-lg" src={SaudDP} width={300} height={300}/>
+          </div>
+          <div className="text-left flex-1 max-md:mt-10 max-md:text-center">
+            <h1 className="text-3xl font-bold">Saud Hashmi</h1>
+            <code className="text-sky-500">Co-Founder @ OnlyGANs, Head of Engineering @ Meme-Ed</code>
+            <p className="text-sm">Saud is an educator, engineer and entrepreneur (E3) working towards creating real social value in the ventures he is involved in. He bases his work on the E3 philosophy, a strong set of tenets he lives by in his professional life. Primarily, he has an engineering background in computer science, which means he is just as comfortable with building AI models, as he is with developing designs & websites. What makes him unique is his persistence to learn and build whatever is required.</p><br/>
+            <div className="flex gap-2 justify-center text-sm text-white">
+              <a className="px-2 py-1 bg-gradient-to-bl from-sky-500 to-sky-300 rounded-full hover:bg-gradient-to-t hover:text-black duration-150" href="https://saudhashmi.com/resume">Resume</a>
+              <a className="px-2 py-1 bg-gradient-to-bl from-sky-500 to-sky-300 rounded-full hover:bg-gradient-to-t hover:text-black duration-150" href="https://github.com/BetterCallSaud">GitHub</a>
+              <a className="px-2 py-1 bg-gradient-to-bl from-sky-500 to-sky-300 rounded-full hover:bg-gradient-to-t hover:text-black duration-150" href="https://twitter.com/BtrCallSaud">Twitter / X</a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        {/* SHREYTAM SECTION */}
+        <div className="mt-10 flex pr-20 justify-evenly max-md:flex-col max-md:pr-0">
+          <div className="flex-1 flex justify-center">
+            <Image className="rounded-md shadow-lg" src={ShreytamDP} width={300} height={300}/>
+          </div>
+          <div className="text-left flex-1 max-md:mt-10 max-md:text-center">
+            <h1 className="text-3xl font-bold">Shreytam Goyal</h1>
+            <code className="text-sky-500">Intern @ TDB.AI, Co-Founder @ OnlyGANs</code>
+            <p className="text-sm">Shreytam is a typical geek. He is a total Apple/Nvidia/Samsung/Sony fanatic. Considering all those companies, it is safe to say he's invested in R&D projects from all around the world, esp. in the fields of semiconductors, computing hardware, computer vision and analog computing. Once he's invested in something, he gets into it deep; analysing and absorbing all concepts necessary behind the workings of some technology. His best part: asking good questions.</p><br/>
+            <div className="flex gap-2 justify-center text-sm text-white">
+              <a className="px-2 py-1 bg-gradient-to-bl from-sky-500 to-sky-300 rounded-full hover:bg-gradient-to-t hover:text-black duration-150" href="https://github.com/ShreytamGoyal">GitHub</a>
+              <a className="px-2 py-1 bg-gradient-to-bl from-sky-500 to-sky-300 rounded-full hover:bg-gradient-to-t hover:text-black duration-150" href="https://twitter.com/Shreytamgoyall">Twitter / X</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
